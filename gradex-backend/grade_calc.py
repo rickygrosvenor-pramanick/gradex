@@ -1,5 +1,4 @@
-import json
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
@@ -16,7 +15,7 @@ def courses():
     """
     Returns the dictionary of course data.
     """
-    return jsonify(courses_data)
+    return render_template("courses.html", courses_data=courses_data)
 
 @app.route('/course', methods=['POST'])
 def add_course():
