@@ -9,7 +9,12 @@
     <h1>Courses:</h1>
     <ul>
         {% for key, value in courses_data.items() %}
-            <li>{{ key }}: {{ value }}</li>
+            <li>{{ key }}:</li>
+            {% for k in value %}
+                {% for a, b in k.items() %}
+                    <li>{{ a }}: {{ b }} </li>
+                {% endfor %}
+            {% endfor %}
         {% endfor %}
     </ul>
 
