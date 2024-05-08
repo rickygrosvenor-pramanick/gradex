@@ -14,7 +14,6 @@ courses_data = {
 def courses():
     """
     Returns the dictionary of course data.
-    ok
     """
     return render_template("courses.html", courses_data=courses_data)
 
